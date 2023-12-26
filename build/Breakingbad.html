@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=-1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Breaking Bad</title>
+</head>
+<style>
+    .card{
+        height: 128px;
+        width: 90px;
+        margin: 2.1px;
+    }
+    body {
+        background-image: url(breakingbadimages/backgroundimg.jpg);
+        background-size: cover;
+    }
+    
+</style>
+<body class="text-center">
+    <img src="images/Card Quest.svg" alt="" class="mx-auto my-auto relative top-3 w-40 mobile:w-56 mobile:relative mobile:top-16 mobile:left-10">
+    <div id="board" class="h-[532px] w-[475px] bg-orange-400 m-auto border-solid border-2 border-black flex-wrap flex mobile:mt-28 mt-6"></div>
+    <p id="errors" class="text-center inline text-xl font-semibold mobile:relative mobile:left-8 mobile:top-1s text-amber-300">Mismatch:</p>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music/Breaking Bad.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script src="BreakingBad.js"></script>
+</body>
+</html>

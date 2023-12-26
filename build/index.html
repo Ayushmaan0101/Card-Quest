@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Card Quest</title>
+    <style>
+        body {
+            background-image: url(images/mainimgdesktop.svg);
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            body {
+                background-image: url(images/mainimage.png);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    </style>
+    <title>Your Game Title</title>
+</head>
+<body class="flex flex-col justify-center relative bottom-36 ">
+    <img src="images/Card Quest.svg" alt="" class="w-[500px] mobile:absolute bottom-4 md:hidden">
+    <select id="themeSelector" class="p-2 bg-yellow-300 rounded mt-10 mobile:relative mobile:bottom-[180px] md:relative md:top-10">
+        <option value="choosetheme">Choose Theme</option>
+        <option value="Breaking Bad">Breaking Bad</option>
+        <option value="Pokemon">Pokemon</option>
+    </select>
+    <button id="playButton" class="mt-10 bg-green-500 p-1 px-3 rounded-sm mobile:relative mobile:bottom-48 font-semibold md:relative md:top-10" onclick="playGame()">Play</button>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music/mainthememusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        function playGame() {
+            var themeSelector = document.getElementById("themeSelector");
+            var selectedTheme = themeSelector.value;
+
+            if (selectedTheme === "choosetheme") {
+                alert("Please select a theme before playing.");
+            } else if (selectedTheme === "Breaking Bad"){
+                window.location.href = "bbloading.html";
+            }else if(selectedTheme === "Pokemon"){
+                window.location.href = "pokemonloading.html";
+            }
+        }
+    </script>
+</body>
+</html>
